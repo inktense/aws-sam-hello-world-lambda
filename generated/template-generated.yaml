@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: A starter AWS Lambda function.
+Resources:
+  helloworld:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: lambda.helloFromLambdaHandler
+      Runtime: nodejs14.x
+      CodeUri: s3://sam-cli-hello-world-02.01.2022/71417a10825b775fff57245b8d4963e6
+      Description: A starter AWS Lambda function.
+      MemorySize: 128
+      Timeout: 3
